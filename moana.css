@@ -1,0 +1,183 @@
+body {
+    font-family: "Chivo", sans-serif;
+    background-color: rgb(88, 200, 217);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#header-container {
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: white; 
+    z-index: 1000; 
+    padding: 5px 0; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#text-container {
+    display: flex;
+    align-items: center;
+    margin-left: 530px;
+}
+
+.block {
+    color: #3D2B15; 
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.content:hover {
+    background-color: #DFD2C2;
+    border-radius: 5px;
+}
+
+
+
+
+.BAR-list {
+    display: flex;
+    position: absolute; 
+    flex-direction: column;
+    z-index: 2;
+    background-color: white;
+    margin: 0; 
+    padding: 10px 0; 
+    visibility: hidden; 
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    transition: clip-path 0.5s ease, visibility 0.3s ease; 
+    letter-spacing: 1.8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd;
+    width: 200px; 
+}
+
+
+#BAR-list.show {
+    visibility: visible;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.block .content {
+    position: relative; 
+    text-align: center;
+}
+
+
+.block .BAR-list {
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+.content:hover .BAR-list {
+    visibility: visible;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.BAR-list a {
+    text-decoration: none;
+    color: #333; 
+    padding: 8px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd; 
+    border-radius: 0; 
+}
+
+.BAR-list a:last-child {
+    border-bottom: none;
+}
+
+
+.BAR-list a:hover {
+    color: #ffffff; 
+    background-color: #BC903F; 
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.TITLE {
+    text-align: center;
+   margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 0px;
+}
+
+.lionphoto {
+    height: 380px;
+    width:350px ;
+    border-radius: 15px; /* 圓角 */
+    margin-top: 15px;
+}
+
+.content-wrapper {
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 垂直置中對齊 */
+    gap: 20px; /* 照片和文字之間的距離 */
+}
+
+
+
+ul {
+    margin: 0; /* 去掉默認的上邊距 */
+    padding: 0; /* 去掉默認的內邊距 */
+    list-style-type: none; /* 去掉項目前的符號 */
+}
+
+.secondtitle {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.lioncontent {
+    font-size: 15px;
+}
+
+/* #footer {
+    width: 1100px;
+    height: 100px;
+    background-color: #BC903F;
+    margin-top: 50px;
+}
+
+.GROUP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: white;
+    font-size: 15px;
+} */
+
+
+.background {
+    background-color: white; /* 白色背景 */
+    margin: 100px 50px; /* 上下、左右的外邊距 */
+    border-radius: 15px; /* 圓角 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 柔和陰影 */
+    padding: 20px; /* 內邊距，讓內部元素有呼吸空間 */
+    border: 1px solid #ddd; /* 添加淺灰色邊框，增加層次 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 動態效果 */
+}
+
+/* 鼠標懸停時增加交互感 */
+.background:hover {
+    transform: translateY(-5px); /* 微微向上移動 */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* 加強陰影效果 */
+}
